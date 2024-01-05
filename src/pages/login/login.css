@@ -1,0 +1,35 @@
+body {
+    background-color: var(--grey-white);
+
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+
+    overflow-x: hidden;
+}
+
+.loginForm {
+    width: 832px;
+    height: 416px;
+
+    margin-top: 300px;
+    margin-bottom: 364px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form {
+
+}
+
+.textField {
+
+}
+
+.button {
+
+}
