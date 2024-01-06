@@ -23,13 +23,8 @@ body {
 }
 
 .form {
-
-}
-
-.textField {
-
-}
-
-.button {
-
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }

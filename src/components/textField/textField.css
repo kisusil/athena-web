@@ -1,0 +1,29 @@
+.textField {
+    width: 360px;
+    height: 64px;
+}
+
+.label-for-input {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--grey-white);
+    width: 56px;
+    margin-left: 16px;
+
+    color: var(--grey-dark);
+    text-align: center;
+    font-size: var(--body-textFieldName);
+    font-weight: var(--medium);
+}
+
+.input {
+    width: 310px;
+    height: 19px;
+    border-radius: 8px;
+    border: 1px solid var(--grey-medium);
+    padding: 18px 24px 15px 24px;
+    color: var(--grey-medium);
+    font-size: var(--body-text-2);
+    font-weight: var(--regular);
+}

@@ -1,4 +1,4 @@
-body {
+* {
     font-family: 'Roboto Condensed', sans-serif;
     --regular: 400;
     --medium: 500;
@@ -31,4 +31,3 @@ body {
     --shadows-shadow-1: 0px 2px 15px 0px rgba(0, 0, 0, 0.05);
     --shadows-shadow-2: 0px 2px 25px 0px rgba(0, 0, 0, 0.10);
 }
-

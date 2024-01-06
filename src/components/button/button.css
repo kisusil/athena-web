@@ -1,0 +1,18 @@
+.button {
+    display: flex;
+    width: 360px;
+    height: 54px;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--grey-white);
+    text-align: center;
+    font-size: var(--buttons-large);
+    font-weight: var(--bold);
+
+    border-radius: 8px;
+    border: none;
+    opacity: 0.4;
+    background: var(--accent-medium-blue);
+    padding: 0;
+}
