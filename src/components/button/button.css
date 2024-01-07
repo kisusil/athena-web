@@ -12,7 +12,26 @@
 
     border-radius: 8px;
     border: none;
+    padding: 0;
+}
+
+.button:focus-visible {
+    outline: none;
+}
+
+.button-active {
+    opacity: 1;
+    background: var(--accent-medium-blue);
+    transition: background-color ease-out 150ms;
+}
+
+.button-active:hover {
+    background-color: var(--accent-dark-blue);
+    opacity: 1;
+    cursor: pointer;
+}
+
+.button-disabled {
     opacity: 0.4;
     background: var(--accent-medium-blue);
-    padding: 0;
 }
