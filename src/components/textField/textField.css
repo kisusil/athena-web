@@ -1,6 +1,8 @@
 .textField {
-    width: 360px;
+    flex: 1;
     position: relative;
+
+    display: flex;
 }
 
 .label-for-input {
@@ -35,7 +37,8 @@
 }
 
 .input {
-    width: 310px;
+    flex: 1;
+    min-width: 310px;
     height: 19px;
     border-radius: 8px;
     border: 1px solid var(--grey-medium);

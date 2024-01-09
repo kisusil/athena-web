@@ -1,18 +1,26 @@
 .button {
     display: flex;
-    width: 360px;
     height: 54px;
     justify-content: center;
     align-items: center;
 
     color: var(--grey-white);
     text-align: center;
-    font-size: var(--buttons-large);
     font-weight: var(--bold);
 
     border-radius: 8px;
     border: none;
     padding: 0;
+}
+
+.buttonLarge {
+    width: 360px;
+    font-size: var(--buttons-large);
+}
+
+.buttonMedium {
+    width: 160px;
+    font-size: var(--buttons-medium);
 }
 
 .button:focus-visible {
@@ -34,4 +42,21 @@
 .button-disabled {
     opacity: 0.4;
     background: var(--accent-medium-blue);
+}
+
+.button-active-accent {
+    opacity: 0.85;
+    background: var(--accent-red);
+    transition: background-color ease-out 150ms;
+}
+
+.button-active-accent:hover {
+    background-color: var(--accent-red);
+    opacity: 1;
+    cursor: pointer;
+}
+
+.button-disabled-accent {
+    opacity: 0.4;
+    background: var(--accent-red);
 }

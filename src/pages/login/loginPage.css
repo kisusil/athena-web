@@ -1,4 +1,4 @@
-body {
+.login-body {
     background-color: var(--grey-white);
     width: 100vw;
     height: 100vh;
@@ -6,13 +6,12 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 0;
 }
 
 .loginForm {
     width: 832px;
     height: 416px;
-    margin-bottom: 32px;
+    margin-bottom: 84px;
 
     display: flex;
     flex-direction: row;

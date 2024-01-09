@@ -1,0 +1,39 @@
+.application {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 24px;
+    align-items: center;
+    padding: 18px 28px 28px 28px;
+
+    background: var(--grey-white);
+    border-radius: 16px;
+    box-shadow: var(--shadows-shadow-2);
+}
+
+.form-applications {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    gap: 24px;
+
+}
+
+.info-applications {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.info-applications-1 {
+    color: var(--grey-dark);
+    font-size: var(--body-h3);
+    font-weight: var(--medium);
+}
+
+.info-applications-2 {
+    color: var(--grey-medium);
+    font-size: var(--body-text-1);
+    font-weight: var(--regular);
+}

@@ -48,40 +48,47 @@ function LoginPage() {
     }
 
     return (
-        <div className="loginForm">
-            <img src="largeLogo.svg" alt="Логотип"/>
-            <section className="form">
-                <TextField
-                    title="Логин"
-                    type="text"
-                    placeholder="Введите логин"
-                    isError={error}
-                    value={login}
-                    setValue={onLoginChange}
-                />
-                <TextField
-                    title="Пароль"
-                    type="password"
-                    placeholder="Введите пароль"
-                    error={error && "Неверный логин или пароль, попробуйте еще раз"}
-                    isError={error}
-                    value={password}
-                    setValue={onPasswordChange}
-                />
-                {buttonActive && (
-                    <Button
-                        name="Войти"
-                        state="active"
-                        onClick={onButtonClick}
+        <div className="login-body">
+            <div className="loginForm">
+                <img src="largeLogo.svg" alt="Логотип"/>
+                <section className="form">
+                    <TextField
+                        title="Логин"
+                        type="text"
+                        placeholder="Введите логин"
+                        isError={error}
+                        value={login}
+                        setValue={onLoginChange}
                     />
-                )}
-                {!buttonActive && (
-                    <Button
-                        name="Войти"
-                        onClick={() => ""}
+                    <TextField
+                        title="Пароль"
+                        type="password"
+                        placeholder="Введите пароль"
+                        error={error && "Неверный логин или пароль, попробуйте еще раз"}
+                        isError={error}
+                        value={password}
+                        setValue={onPasswordChange}
                     />
-                )}
-            </section>
+                    {buttonActive && (
+                        <Button
+                            name="Войти"
+                            state="active"
+                            size="large"
+                            accentColor="blue"
+                            onClick={onButtonClick}
+                        />
+                    )}
+                    {!buttonActive && (
+                        <Button
+                            name="Войти"
+                            state="disabled"
+                            size="large"
+                            accentColor="blue"
+                            onClick={() => ""}
+                        />
+                    )}
+                </section>
+            </div>
         </div>
     );
 }

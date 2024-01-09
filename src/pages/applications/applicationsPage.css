@@ -1,0 +1,36 @@
+.applications-body {
+    background-color: var(--grey-background);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.block-applications {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    background-color: var(--grey-white);
+    border-radius: 24px;
+    box-shadow: var(--shadows-shadow-1);
+    padding: 48px;
+    margin-bottom: 64px;
+}
+
+.list-applications {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.searchForm {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    gap: 24px;
+
+    width: 100%;
+}

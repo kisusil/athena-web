@@ -19,7 +19,7 @@
 
     --grey-white: #FFFFFF;
     --grey-light: #F5F7F9;
-    --grey-bckground: #EAEDEF;
+    --grey-background: #EAEDEF;
     --grey-medium: #717782;
     --grey-dark: #343434;
     --accent-light-blue: #D2DDF8;
@@ -30,4 +30,17 @@
 
     --shadows-shadow-1: 0px 2px 15px 0px rgba(0, 0, 0, 0.05);
     --shadows-shadow-2: 0px 2px 25px 0px rgba(0, 0, 0, 0.10);
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    color: var(--accent-dark-blue);
+    text-align: center;
+    font-size: var(--body-h1);
+    font-weight: var(--medium);
+    margin-top: 64px;
+    margin-bottom: 48px;
 }
