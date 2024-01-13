@@ -19,12 +19,12 @@ function ApplicationsPage() {
     }
 
     return (
-        <div className="applications-body">
+        <div className="tab-body">
             <Navigation/>
             <article>
               <h1>Заявки на регистрацию</h1>
             </article>
-            <section className="block-applications">
+            <section className="tab-block">
                 <section className="searchForm">
                     <TextField
                         title="Поиск по почте"
