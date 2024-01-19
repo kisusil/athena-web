@@ -1,0 +1,77 @@
+* {
+    font-family: 'Roboto Condensed', sans-serif;
+    --regular: 400;
+    --medium: 500;
+    --bold: 700;
+    --paragraph: 130%;
+    --buttons-large: 18px;
+    --buttons-medium: 16px;
+    --avatars-large: 36px;
+    --avatars-medium: 24px;
+    --avatars-small: 16px;
+    --body-h1: 36px;
+    --body-h2: 24px;
+    --body-h3: 18px;
+    --body-textFieldName: 16px;
+    --body-text-1: 18px;
+    --body-text-2: 16px;
+    --body-text-3: 12px;
+
+    --grey-white: #FFFFFF;
+    --grey-light: #F5F7F9;
+    --grey-background: #EAEDEF;
+    --grey-medium: #717782;
+    --grey-dark: #343434;
+    --accent-light-blue: #D2DDF8;
+    --accent-medium-blue: #6A8EE8;
+    --accent-dark-blue: #015CA3;
+    --accent-red: #DD112E;
+    --accent-green: #55C21A;
+
+    --shadows-shadow-1: 0px 2px 15px 0px rgba(0, 0, 0, 0.05);
+    --shadows-shadow-2: 0px 2px 25px 0px rgba(0, 0, 0, 0.10);
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    color: var(--accent-dark-blue);
+    text-align: center;
+    font-size: var(--body-h1);
+    font-weight: var(--medium);
+    margin-top: 64px;
+    margin-bottom: 48px;
+}
+
+.searchForm {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    gap: 24px;
+
+    width: 100%;
+}
+
+.tab-body {
+    background-color: var(--grey-background);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.tab-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    background-color: var(--grey-white);
+    border-radius: 24px;
+    box-shadow: var(--shadows-shadow-1);
+    padding: 48px;
+    margin-bottom: 64px;
+}

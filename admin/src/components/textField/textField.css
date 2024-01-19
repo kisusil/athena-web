@@ -3,6 +3,7 @@
     position: relative;
 
     display: flex;
+    flex-direction: column;
 }
 
 .label-for-input {
@@ -12,7 +13,7 @@
     background: var(--grey-white);
     padding: 0 8px;
     margin-left: 16px;
-    top: calc(50% - 32px);
+    top: 0;
     position: absolute;
 
     color: var(--grey-dark);
@@ -26,7 +27,6 @@
 }
 
 .label-for-input-textError {
-    top: calc(50% - 47px);
     color: var(--accent-red);
 }
 

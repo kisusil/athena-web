@@ -1,0 +1,19 @@
+.toasted {
+    height: 54px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    padding-right: 24px;
+    padding-left: 24px;
+
+    border-radius: 8px;
+    background: var(--grey-white);
+    box-shadow: var(--shadows-shadow-2);
+}
+
+.info-toasted {
+    color: var(--grey-dark);
+    font-size: var(--body-text-2);
+    font-weight: var(--regular);
+}

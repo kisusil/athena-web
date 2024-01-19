@@ -1,0 +1,42 @@
+header {
+    background-color: var(--grey-white);
+    width: 100vw;
+    height: 64px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+}
+
+a.tab {
+    color: var(--grey-dark);
+    font-size: var(--body-h3);
+    font-weight: var(--medium);
+    line-height: 62px;
+    text-decoration: none;
+    transition: color ease-out 150ms;
+}
+
+a.tab:hover {
+    color: var(--accent-dark-blue);
+}
+
+a.tab-active {
+    color: var(--accent-dark-blue);
+    border-radius: 1px;
+    border-bottom: 2px solid var(--accent-dark-blue);
+}
+
+nav {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 64px;
+    position: absolute;
+}
+
+.smallLogo {
+    margin-left: 28px;
+}

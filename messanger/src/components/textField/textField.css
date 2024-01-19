@@ -1,0 +1,98 @@
+.textField {
+    flex: 1;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.label-for-input {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--grey-white);
+    padding: 0 8px;
+    margin-left: 16px;
+    top: 0;
+    position: absolute;
+
+    color: var(--grey-dark);
+    text-align: center;
+    font-size: var(--body-textFieldName);
+    font-weight: var(--medium);
+}
+
+.label-for-input-error {
+    color: var(--accent-red);
+}
+
+.label-for-input-textError {
+    color: var(--accent-red);
+}
+
+.error-for-input {
+    color: var(--accent-red);
+    font-size: var(--body-text-2);
+    font-weight: var(--regular);
+}
+
+.input {
+    flex: 1;
+    min-width: 310px;
+    height: 19px;
+    border-radius: 8px;
+    border: 1px solid var(--grey-medium);
+    padding: 18px 24px 15px 24px;
+    margin-top: 10px;
+    font-size: var(--body-text-2);
+    font-weight: var(--regular);
+    color: var(--grey-dark);
+    transition: border ease-out 150ms;
+}
+
+.input-error {
+    border: 1px solid var(--accent-red);
+}
+
+.input-textError {
+    border: 1px solid var(--accent-red);
+    margin-bottom: 12px;
+}
+
+.input::placeholder {
+    font-size: var(--body-text-2);
+    font-weight: var(--regular);
+    color: var(--grey-medium);
+}
+
+.input-error::placeholder {
+    font-size: var(--body-text-2);
+    font-weight: var(--regular);
+    color: var(--grey-medium);
+}
+
+.input:hover {
+    border: 1px solid var(--accent-dark-blue);
+    cursor: pointer;
+}
+
+.input-error:hover {
+    border: 1px solid var(--accent-red);
+}
+
+.input-textError:hover {
+    border: 1px solid var(--accent-red);
+}
+
+.input:focus-visible {
+    border: 1px solid var(--accent-dark-blue);
+    outline: none;
+}
+
+.input-error:focus-visible {
+    border: 1px solid var(--accent-red);
+}
+
+.input-textError:focus-visible {
+    border: 1px solid var(--accent-red);
+}
