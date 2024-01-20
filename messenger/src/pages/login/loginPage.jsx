@@ -1,10 +1,11 @@
 import React, {useEffect, useState} from "react";
 import './loginPage.css';
 import TextField from "../../components/textField/textField";
-import {doesUserWithSuchEmailExist} from "../../data/users";
-import {isInvitationCorrect, sendApplication} from "../../data/invitations";
+import {doesUserWithSuchEmailExist, getLoggedInUser} from "../../data/users";
+import {tryToLogin, sendApplication} from "../../data/invitations";
 import Button from "../../components/button/button";
 import Toasted from "../../components/toasted/toasted";
+import {useNavigate} from "react-router-dom";
 
 function LoginPage() {
     const [email, setEmail] = useState('');
@@ -13,6 +14,8 @@ function LoginPage() {
     const [invitationError, setInvitationError] = useState('');
     const [isInvitationFormVisible, setInvitationFormVisible] = useState(false);
     const [successToastVisible, setSuccessToastVisible] = useState(false);
+    const [loggedInUser,] = useState(getLoggedInUser())
+    const navigate = useNavigate();
 
     function isEmailFormFilled() {
         return email && email !== '';
@@ -60,18 +63,23 @@ function LoginPage() {
             return;
         }
 
-        if (!isInvitationCorrect(email, invitation)) {
+        if (!tryToLogin(email, invitation)) {
             setInvitationError('Такого кода не существует. Проверьте введенные данные и попробуйте еще раз');
             return;
         }
 
         setInvitationError('');
-        // TODO: redirect
+        navigate("/profile");
     }
 
     useEffect(() => {
+        if (getLoggedInUser()) navigate("/profile");
         setTimeout(() => setSuccessToastVisible(false), 5000);
-    }, [successToastVisible]);
+    }, [navigate, loggedInUser, successToastVisible]);
+
+    if (loggedInUser) {
+        return (<></>);
+    }
 
     return (
         <>

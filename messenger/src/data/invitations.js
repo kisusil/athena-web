@@ -1,6 +1,7 @@
-import {registerUser} from "./users";
+import {getUserByEmail, registerUser} from "./users";
 
 const STORAGE_INVITATIONS_KEY = 'am-invitations';
+const STORAGE_LOGGED_IN_USER_KEY = 'am-logged-in-user'
 
 export function initializeDefaultValues() {
     // nothing
@@ -14,9 +15,16 @@ function getAllInvitations() {
     return [];
 }
 
-export function isInvitationCorrect(email, code) {
+export function tryToLogin(email, code) {
     const invitations = getAllInvitations();
-    return invitations.some((invitation) => invitation.email === email && invitation.code === code)
+    const isSuccess = invitations.some((invitation) => invitation.email === email && invitation.code === code)
+
+    if (isSuccess) {
+        const user = getUserByEmail(email);
+        window.localStorage.setItem(STORAGE_LOGGED_IN_USER_KEY, JSON.stringify(user));
+    }
+
+    return isSuccess;
 }
 
 export function sendApplication(email) {

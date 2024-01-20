@@ -1,0 +1,48 @@
+.background-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+
+    padding: 112px;
+
+    border-radius: 24px;
+    background: var(--grey-white);
+
+    box-shadow: var(--shadows-shadow-1);
+}
+
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.profile-form__input-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+}
+
+.view-profile-form__span-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+
+    margin-bottom: 24px;
+}
+
+.login-span {
+    color: var(--grey-medium);
+    font-size: var(--body-h3);
+    font-weight: var(--regular);
+}
+
+.name-span {
+    font-size: var(--body-h2);
+    font-weight: var(--medium);
+}
