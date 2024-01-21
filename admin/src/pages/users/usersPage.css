@@ -1,0 +1,14 @@
+.table-buttons {
+    width: 1159px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: start;
+    gap: 112px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}

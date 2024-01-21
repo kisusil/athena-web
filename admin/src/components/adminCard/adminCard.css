@@ -1,0 +1,6 @@
+.card-form-column-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 34px;
+}

@@ -8,6 +8,6 @@ import UsersPage from "./pages/users/usersPage";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <LoginPage/>
+    <UsersPage/>
   </React.StrictMode>
 );
