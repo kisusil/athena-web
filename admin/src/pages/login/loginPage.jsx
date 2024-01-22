@@ -1,14 +1,22 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import './loginPage.css';
 import TextField from "../../components/textField/textField";
 import Button from "../../components/button/button";
-import {adminLogin} from "../../data/users";
+import {adminLogin, getLoggedInAdmin} from "../../data/users";
+import {useNavigate} from "react-router-dom";
 
 function LoginPage() {
     const [login, setLogin] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState(false);
     const [buttonActive, setButtonActive] = useState(false);
+    const navigate= useNavigate();
+
+    useEffect(() => {
+        if (getLoggedInAdmin()) {
+            navigate("/applications");
+        }
+    });
 
     function onLoginChange(newLogin) {
         setLogin(newLogin);
@@ -39,11 +47,12 @@ function LoginPage() {
             return;
         }
 
-        const adminId = adminLogin(login, password);
-        if (adminId === null) {
+        const isLoggedIn = adminLogin(login, password);
+        if (!isLoggedIn) {
             setError(true);
         } else {
             setError(false);
+            navigate("/applications");
         }
     }
 

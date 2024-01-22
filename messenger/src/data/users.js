@@ -13,6 +13,16 @@ const STORAGE_USERS_KEY = 'am-users';
 const STORAGE_CURRENT_FREE_ID_KEY = 'am-users-free-id';
 const STORAGE_LOGGED_IN_USER_KEY = 'am-logged-in-user'
 
+export function dateToFormattedString(date) {
+    return new Intl.DateTimeFormat('ru', {
+        day: '2-digit',
+        month: '2-digit',
+        year: '2-digit',
+        minute: 'numeric',
+        hour: 'numeric'
+    }).format(date).replace(',', '');
+}
+
 export function initializeDefaultValues() {
     const users = [
         {
@@ -21,6 +31,8 @@ export function initializeDefaultValues() {
             name: USER_1_NAME,
             surname: USER_1_SURNAME,
             login: USER_1_LOGIN,
+            blocked: false,
+            lastLogin: dateToFormattedString(new Date()),
         },
         {
             id: USER_2_ID,
@@ -28,6 +40,8 @@ export function initializeDefaultValues() {
             name: USER_2_NAME,
             surname: USER_2_SURNAME,
             login: USER_2_LOGIN,
+            blocked: false,
+            lastLogin: dateToFormattedString(new Date()),
         },
     ]
 

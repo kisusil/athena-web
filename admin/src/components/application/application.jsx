@@ -3,29 +3,17 @@ import './application.css';
 import TextField from "../textField/textField";
 import Button from "../button/button";
 
-function isLoginFilled(login) {
-    return login !== undefined && login !== "";
-}
-
 function Application(props) {
-    const [login, setLogin] = useState(undefined)
-
-    function onAccept() {
-        // TODO
-    }
-
-    function onReject() {
-        // TODO
-    }
+    const [login, setLogin] = useState('')
 
     return (
         <div className="application">
             <section className="info-applications">
                 <span className="info-applications-1">
-                    {props.name}
+                    {props.application.email}
                 </span>
                 <span className="info-applications-2">
-                    {props.date}
+                    {props.application.date}
                 </span>
             </section>
             <section className="form-applications">
@@ -36,29 +24,19 @@ function Application(props) {
                     value={login}
                     setValue={setLogin}
                 />
-                {isLoginFilled(login) && (
-                    <Button
-                        name="Принять"
-                        state="active"
-                        size="medium"
-                        accentColor="blue"
-                        onClick={onAccept}
-                    />
-                )}
-                {!isLoginFilled(login) && (
-                    <Button
-                        name="Принять"
-                        state="disabled"
-                        size="medium"
-                        accentColor="blue"
-                    />
-                )}
+                <Button
+                    name="Принять"
+                    state={login && login !== "" ? "active" : "disabled"}
+                    size="medium"
+                    accentColor="blue"
+                    onClick={() => login && login !== "" ? props.onAccept(props.application, login) : () => ""}
+                />
                 <Button
                     name="Отклонить"
                     state="active"
                     size="medium"
                     accentColor="red"
-                    onClick={onReject}
+                    onClick={() => props.onReject(props.application)}
                 />
             </section>
         </div>

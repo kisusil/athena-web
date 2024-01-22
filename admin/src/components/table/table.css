@@ -82,6 +82,10 @@
     background-color: var(--grey-light);
 }
 
+.row:hover {
+    background-color: var(--accent-light-blue);
+}
+
 .data {
     color: var(--grey-dark);
     font-size: var(--body-text-2);

@@ -3,3 +3,35 @@
     flex-direction: row;
     gap: 12px;
 }
+
+.number {
+    display: flex;
+    width: 8px;
+    height: 21px;
+    padding: 2px 8px 1px 8px;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 4px;
+    background: var(--accent-dark-blue);
+
+    color: var(--grey-white);
+    font-size: var(--body-text-2);
+    font-weight: var(--regular);
+}
+
+.pagination-control-disabled g {
+    opacity: 0.4;
+}
+
+.pagination-control g {
+    opacity: 1;
+}
+
+.pagination-control:hover path {
+    fill: var(--accent-medium-blue);
+}
+
+.pagination-control:hover {
+    cursor: pointer;
+}

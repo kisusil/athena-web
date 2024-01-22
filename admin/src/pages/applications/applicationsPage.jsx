@@ -1,26 +1,44 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import './applicationsPage.css';
 import TextField from "../../components/textField/textField";
 import Button from "../../components/button/button";
 import Navigation from "../../components/navigation/navigation";
 import Application from "../../components/application/application";
-import {getAllDefaultApplications, getDefaultApplicationsFiltered} from "../../data/applications";
+import {useNavigate} from "react-router-dom";
+import {getLoggedInAdmin} from "../../data/users";
+import {acceptApplications, getApplicationsPage, rejectApplication} from "../../data/applications";
 
 function ApplicationsPage() {
-    const [emailPattern, setEmailPattern] = useState(undefined)
-    const [applications, setApplications] = useState(getAllDefaultApplications())
+    const [emailPattern, setEmailPattern] = useState('');
+    const [applications, setApplications] = useState(getApplicationsPage(emailPattern));
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (!getLoggedInAdmin()) {
+            navigate("/login");
+        }
+    })
+    if (!getLoggedInAdmin()) {
+        return (<></>);
+    }
 
     function onSearch() {
-        if (emailPattern === undefined || emailPattern === "") {
-            setApplications(getAllDefaultApplications())
-        } else {
-            setApplications(getDefaultApplicationsFiltered(emailPattern))
-        }
+        setApplications(getApplicationsPage(emailPattern));
+    }
+
+    function onAccept(application, login) {
+        acceptApplications(application, login);
+        setApplications(getApplicationsPage(emailPattern));
+    }
+
+    function onReject(application) {
+        rejectApplication(application);
+        setApplications(getApplicationsPage(emailPattern))
     }
 
     return (
         <div className="tab-body">
-            <Navigation/>
+            <Navigation activeTab={0}/>
             <article>
               <h1>Заявки на регистрацию</h1>
             </article>
@@ -42,11 +60,12 @@ function ApplicationsPage() {
                     />
                 </section>
                 <section className="list-applications">
-                    { applications.map((application, index) => (
+                    { applications.map((application) => (
                         <Application
-                            key={index}
-                            name={application.email}
-                            date={application.date}
+                            key={application.id}
+                            application={application}
+                            onAccept={onAccept}
+                            onReject={onReject}
                         />
                     ))}
                 </section>

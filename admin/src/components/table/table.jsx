@@ -1,8 +1,16 @@
 import React from "react";
 import './table.css';
 
-function Table() {
+function chooseRowClassByIndex(index) {
+    return index % 2 === 0 ? "row row-1" : "row row-2";
+}
 
+function booleanToRussian(booleanValue) {
+    if (booleanValue) return "да";
+    return "";
+}
+
+function Table(props) {
     return (
         <section className="table">
             <section className="table-header">
@@ -26,41 +34,15 @@ function Table() {
                     <span className="name height-blocking">Блокировка</span>
                 </div>
             </section>
-            <section className="row-1">
-                <span className="data height-id">1</span>
-                <span className="data height-login">admin1</span>
-                <span className="data height-email">admin1@gmail.com</span>
-                <span className="data height-admin">да</span>
-                <span className="data height-blocking">да</span>
-            </section>
-            <section className="row-2">
-                <span className="data height-id">2</span>
-                <span className="data height-login">admin1</span>
-                <span className="data height-email">admin1@gmail.com</span>
-                <span className="data height-admin">да</span>
-                <span className="data height-blocking">да</span>
-            </section>
-            <section className="row-1">
-                <span className="data height-id">3</span>
-                <span className="data height-login">admin1</span>
-                <span className="data height-email">admin1@gmail.com</span>
-                <span className="data height-admin">да</span>
-                <span className="data height-blocking">да</span>
-            </section>
-            <section className="row-2">
-                <span className="data height-id">4</span>
-                <span className="data height-login">admin1</span>
-                <span className="data height-email">admin1@gmail.com</span>
-                <span className="data height-admin">да</span>
-                <span className="data height-blocking">да</span>
-            </section>
-            <section className="row-1">
-                <span className="data height-id">5</span>
-                <span className="data height-login">admin1</span>
-                <span className="data height-email">admin1@gmail.com</span>
-                <span className="data height-admin">да</span>
-                <span className="data height-blocking">да</span>
-            </section>
+            {props.pageContent && props.pageContent.map((user, index) => (
+                <section key={index} className={chooseRowClassByIndex(index)} onClick={() => props.onUserSelected(user.id)}>
+                    <span className="data height-id">{user.id}</span>
+                    <span className="data height-login">{user.login}</span>
+                    <span className="data height-email">{user.email}</span>
+                    <span className="data height-admin">{booleanToRussian(user.admin)}</span>
+                    <span className="data height-blocking">{booleanToRussian(user.blocked)}</span>
+                </section>
+            ))}
         </section>
     );
 }

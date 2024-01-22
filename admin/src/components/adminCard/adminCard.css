@@ -4,3 +4,12 @@
     justify-content: end;
     gap: 34px;
 }
+
+.card-return-icon {
+    z-index: 100;
+}
+
+.card-return-icon:hover path[id="fill"]{
+    fill: var(--accent-dark-blue);
+    cursor: pointer;
+}
