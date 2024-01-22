@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import MessengerPage from "../../components/messengerPage/messegnerPage";
+import MessengerPage from "../../components/messengerPage/messengerPage";
 import EditProfileForm from "../../components/profileForms/createProfileForm/editProfileForm";
 import {doLogout, getLoggedInUser} from "../../data/users";
 import {updateUser} from "../../data/users";

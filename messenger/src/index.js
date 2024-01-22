@@ -6,6 +6,8 @@ import './data/storage';
 import ProfilePage from "./pages/profile/profilePage";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import IndexPage from "./pages/indexPage";
+import ChatsPage from "./pages/chats/chatsPage";
+import NotificationsPage from "./pages/notifications/notificationsPage";
 
 const router = createBrowserRouter([
     {
@@ -15,6 +17,14 @@ const router = createBrowserRouter([
     {
         path: "/profile",
         element: <ProfilePage/>,
+    },
+    {
+        path: "/chats",
+        element: <ChatsPage/>,
+    },
+    {
+        path: "/notifications",
+        element: <NotificationsPage/>,
     },
     {
         path: "/",

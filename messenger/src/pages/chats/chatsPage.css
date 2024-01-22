@@ -1,0 +1,25 @@
+.chats-block {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    gap: 48px;
+    margin-top: 64px;
+    margin-bottom: 64px;
+}
+
+.chats-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.block-create-chats {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    padding: 24px 24px 36px 24px;
+
+    border-radius: 8px;
+    background: var(--grey-white);
+    box-shadow: var(--shadows-shadow-1);
+}

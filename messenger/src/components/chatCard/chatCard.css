@@ -1,0 +1,78 @@
+.chat-card {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    padding: 22px 24px 22px 24px;
+
+    border-radius: 8px;
+    background: var(--grey-white);
+    box-shadow: var(--shadows-shadow-1);
+}
+
+.chat-card:hover {
+    cursor: pointer;
+    box-shadow: none;
+}
+
+.chat-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.chat-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.chat-card-info-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.chat-card-info-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.chat-card-line {
+    width: 1002px;
+    height: 1px;
+    border-radius: 2px;
+    background-color: var(--grey-medium);
+}
+
+.user-name {
+    color: var(--grey-dark);
+    font-size: var(--body-h3);
+    font-weight: var(--medium);
+    margin-top: 17px;
+}
+
+.time {
+    color: var(--grey-dark);
+    font-size: var(--body-text-3);
+    font-weight: var(--regular);
+}
+
+.message-text {
+    color: var(--grey-dark);
+    font-size: var(--body-text-2);
+    font-weight: var(--regular);
+}
+
+.number-of-unread {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50px;
+    background-color: var(--accent-light-blue);
+}

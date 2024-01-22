@@ -1,12 +1,11 @@
 import React from "react";
 import Navigation from "../navigation/navigation";
-import './messengerPage.css';
 
 function MessengerPage(props) {
     return (
-        <div className="messenger-page">
+        <div className="tab-body">
             <Navigation activeTab={props.activeHeaderTab}/>
-            <div className="messenger-page__content-wrapper">
+            <div>
                 {props.children}
             </div>
         </div>
