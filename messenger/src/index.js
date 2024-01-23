@@ -30,7 +30,7 @@ const router = createBrowserRouter([
         path: "/",
         element: <IndexPage/>,
     }
-]);
+], { basename: '/~s312578/project/messenger' });
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -1,5 +1,6 @@
 import React from "react";
 import './navigation.css';
+import {Link, useNavigate} from "react-router-dom";
 
 function chooseClassesForTab(tab, activeTab) {
     if (activeTab === undefined && tab === 0) return "tab tab-active";
@@ -12,9 +13,9 @@ function Navigation(props) {
         <header>
             <img className="smallLogo" src="smallLogo.svg" alt="Логотип"/>
             <nav>
-                <a className={chooseClassesForTab(0, props.activeTab)} href="/applications">Заявки</a>
-                <a className={chooseClassesForTab(1, props.activeTab)} href="/users">Пользователи</a>
-                <a className={chooseClassesForTab(2, props.activeTab)} href="/logout">Выход</a>
+                <Link className={chooseClassesForTab(0, props.activeTab)} to="/applications">Заявки</Link>
+                <Link className={chooseClassesForTab(1, props.activeTab)} to="/users">Пользователи</Link>
+                <Link className={chooseClassesForTab(2, props.activeTab)} to="/logout">Выход</Link>
             </nav>
         </header>
     );

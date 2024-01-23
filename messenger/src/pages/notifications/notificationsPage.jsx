@@ -5,7 +5,7 @@ import Notification from "../../components/notification/notification";
 function NotificationsPage() {
 
     return (
-        <MessengerPage>
+        <MessengerPage activeHeaderTab={2}>
             <section className="notifications-block">
                 <Notification/>
                 <Notification/>

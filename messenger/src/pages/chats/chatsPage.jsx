@@ -6,7 +6,7 @@ import './chatsPage.css';
 function ChatsPage() {
 
     return (
-        <MessengerPage>
+        <MessengerPage activeHeaderTab={1}>
             <div className="chats-block">
                 <section className="chats-list">
                     <ChatCard/>

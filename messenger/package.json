@@ -1,5 +1,6 @@
 {
   "name": "athena-messanger",
+  "homepage": "/~s312578/project/messenger",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
