@@ -1,4 +1,4 @@
-.notification {
+.user-card {
     width: 576px;
     display: flex;
     flex-direction: row;
@@ -10,29 +10,30 @@
 
     border-radius: 8px;
     background: var(--grey-white);
+    box-shadow: var(--shadows-shadow-2);
+}
+
+.user-card:hover {
+    cursor: pointer;
     box-shadow: var(--shadows-shadow-1);
 }
 
-.notification:hover {
-    cursor: pointer;
-    box-shadow: none;
-}
-
-.notification-info {
+.user-card-info {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: start;
     gap: 12px;
 }
 
-.notification-info-1 {
-    color: var(--grey-dark);
-    font-size: var(--body-text-1);
-    font-weight: var(--regular);
-}
-
-.notification-info-2 {
+.user-card-name {
     color: var(--grey-dark);
     font-size: var(--body-h3);
     font-weight: var(--medium);
+}
+
+.nickname {
+    color: var(--grey-dark);
+    font-size: var(--body-text-1);
+    font-weight: var(--regular);
 }
