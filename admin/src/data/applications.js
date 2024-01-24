@@ -52,11 +52,11 @@ export function getAllApplications() {
 export function getApplicationsPage(emailPattern) {
     const applications = getAllApplications();
     if (!emailPattern || emailPattern === '') {
-        return applications.sort((a, b) => a.email - b.email).slice(0, 5);
+        return applications.sort((a, b) => a.email - b.email).slice(0, 3);
     }
     return applications.filter((application) => application.email.includes(emailPattern))
         .sort((a, b) => a.email - b.email)
-        .slice(0, 5);
+        .slice(0, 3);
 }
 
 export function acceptApplications(application, login) {

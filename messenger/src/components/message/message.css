@@ -1,3 +1,14 @@
+.alignment-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.alignment-container-my {
+    justify-content: flex-end;
+}
+
 .message {
     display: flex;
     flex-direction: row;

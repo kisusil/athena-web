@@ -250,8 +250,8 @@ export function createNewUser(login, email) {
         window.localStorage.setItem(STORAGE_USERS_KEY, JSON.stringify([]));
     } else {
         currentAvailableId = JSON.parse(rawData);
+        window.localStorage.setItem(STORAGE_CURRENT_AM_FREE_ID_KEY, JSON.stringify(currentAvailableId + 1));
     }
-    window.localStorage.setItem(STORAGE_SELECTED_USER_ID_KEY, JSON.stringify(currentAvailableId + 1));
 
     const invitations = getAllInvitations();
     const newUser = {

@@ -2,14 +2,17 @@ import React from "react";
 import './userCard.css';
 import Avatar from "../avatar/avatar";
 
-function UserCard() {
+function UserCard(props) {
 
     return (
-        <div className="user-card">
-            <Avatar size="medium" name="А" surname="С"/>
+        <div
+            className={props.card.isSelected ? "user-card user-card-active" : "user-card"}
+            onClick={() => props.onSelect(props.card)}
+        >
+            <Avatar size="medium" name={props.card.name} surname={props.card.surname}/>
             <div className="user-card-info">
-                <span className="user-card-name">Александр Степанов</span>
-                <span className="nickname">@aa.stepanov</span>
+                <span className="user-card-name">{props.card.name} {props.card.surname}</span>
+                <span className="nickname">@{props.card.login}</span>
             </div>
         </div>
     );

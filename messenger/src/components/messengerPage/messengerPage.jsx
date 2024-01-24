@@ -5,9 +5,7 @@ function MessengerPage(props) {
     return (
         <div className="tab-body">
             <Navigation activeTab={props.activeHeaderTab}/>
-            <div>
-                {props.children}
-            </div>
+            {props.children}
         </div>
     )
 }

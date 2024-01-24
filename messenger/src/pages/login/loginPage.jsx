@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import './loginPage.css';
 import TextField from "../../components/textField/textField";
 import {doesUserWithSuchEmailExist, getLoggedInUser} from "../../data/users";
-import {tryToLogin, sendApplication} from "../../data/invitations";
+import {tryToLogin, sendApplication, generateInvitations} from "../../data/invitations";
 import Button from "../../components/button/button";
 import Toasted from "../../components/toasted/toasted";
 import {useNavigate} from "react-router-dom";
@@ -38,6 +38,7 @@ function LoginPage() {
 
         setEmailError(undefined);
         setInvitationFormVisible(true);
+        generateInvitations(email);
     }
 
     function onRegister() {

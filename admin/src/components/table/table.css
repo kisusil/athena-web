@@ -84,6 +84,7 @@
 
 .row:hover {
     background-color: var(--accent-light-blue);
+    cursor: pointer;
 }
 
 .data {

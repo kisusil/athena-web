@@ -39,6 +39,21 @@ export function tryToLogin(email, code) {
     return false;
 }
 
+export function generateInvitations(email) {
+    const users = getAllUsers();
+    const targetUser = users.find((user) => user.email === email);
+    if (!targetUser) return;
+
+    const invitations = getAllInvitations();
+    const updatedInvitations = invitations.filter((invitation) => invitation.email !== email);
+    updatedInvitations.push({
+        email: email,
+        code: '1234',
+    });
+
+    window.localStorage.setItem(STORAGE_INVITATIONS_KEY, JSON.stringify(updatedInvitations));
+}
+
 export function sendApplication(email) {
     const rawData = window.localStorage.getItem(STORAGE_APPLICATIONS_AA_KEY);
     let applications = [];
@@ -79,7 +94,7 @@ export function sendApplication(email) {
             code: '1234',
         })
         window.localStorage.setItem(STORAGE_INVITATIONS_KEY, JSON.stringify(invitations));
-    }
 
-    registerUser(email);
+        registerUser(email);
+    }
 }

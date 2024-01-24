@@ -1,0 +1,27 @@
+.send-button-active circle {
+    fill: var(--accent-medium-blue);
+}
+
+.send-button-active g {
+    opacity: 1;
+}
+
+.send-button-active:hover circle {
+    fill: var(--accent-dark-blue);
+}
+
+.send-button-active:hover g {
+    opacity: 1;
+}
+
+.send-button-active:hover {
+    cursor: pointer;
+}
+
+.send-button-disabled g {
+    opacity: 0.5;
+}
+
+.send-button-disabled circle {
+    fill: var(--accent-medium-blue);
+}

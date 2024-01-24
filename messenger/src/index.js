@@ -8,6 +8,7 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import IndexPage from "./pages/indexPage";
 import ChatsPage from "./pages/chats/chatsPage";
 import NotificationsPage from "./pages/notifications/notificationsPage";
+import ChatPage from "./pages/chat/chatPage";
 
 const router = createBrowserRouter([
     {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
     {
         path: "/chats",
         element: <ChatsPage/>,
+    },
+    {
+        path: "/chat",
+        element: <ChatPage/>,
     },
     {
         path: "/notifications",

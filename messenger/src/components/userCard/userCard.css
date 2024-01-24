@@ -1,5 +1,5 @@
 .user-card {
-    width: 576px;
+    flex: 1;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -16,6 +16,11 @@
 .user-card:hover {
     cursor: pointer;
     box-shadow: var(--shadows-shadow-1);
+}
+
+.user-card-active {
+    box-shadow: var(--shadows-shadow-1);
+    background-color: var(--grey-light);
 }
 
 .user-card-info {

@@ -57,9 +57,19 @@ export function getAllUsers() {
     return [];
 }
 
+export function getOtherUsers() {
+    const users = getAllUsers();
+    const currentUser = getLoggedInUser();
+    return users.filter((user) => user.id !== currentUser.id && user.name && user.name !== '');
+}
+
 export function getUserByEmail(email) {
     const users = getAllUsers();
     return users.find((user) => user.email === email)
+}
+
+export function getUserById(id) {
+    return getAllUsers().find((user) => user.id === id);
 }
 
 export function getLoggedInUser() {
