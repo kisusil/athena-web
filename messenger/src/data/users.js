@@ -86,7 +86,6 @@ export function doesUserWithSuchEmailExist(email) {
 }
 
 export function registerUser(email) {
-    // TODO: Если реализуем связь состояния между админом и мессенджером - надо менять логику
     let users = getAllUsers();
     let newUserId = 1;
     const rawData = window.localStorage.getItem(STORAGE_CURRENT_FREE_ID_KEY);
